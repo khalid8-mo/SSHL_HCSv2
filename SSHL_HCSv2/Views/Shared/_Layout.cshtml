@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8" />
@@ -17,12 +17,7 @@
     <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/0616c6a2ed.js" crossorigin="anonymous"></script>
     <style>
-        /*   @@import url('https://rsms.me/inter/inter.css');
-
-        :root {
-            --tblr-font-sans-serif: Inter, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue,Cairo, sans-serif;
-        }*/
-        .fa-solid, .fas {
+         .fa-solid, .fas {
             color: #d1a338;
             line-height: 1.3;
         }
@@ -74,6 +69,7 @@
                     <div class="nav-item d-none d-md-flex me-3">
 
                     </div>
+                    @* Notafcation *@
                     <div class="d-none d-md-flex">
                         <!-- Dark Theme -->
                         <!--<a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode"
@@ -198,11 +194,12 @@
                             </div>
                         </div>
                     </div>
+                    @* User Data *@
                     <div class="nav-item dropdown">
                         <span href="Javascript:void" class="nav-link d-flex lh-1 text-reset p-0" style="cursor:context-menu">
                             <div class="d-none d-xl-block ps-2">
                                 <div>صالح بن علي بن سعدي الشمراني </div>
-                                <div class="mt-1 small text-muted">( إدارة الحسابات ) </div>
+                                <div class="mt-1 small text-muted">( الإدارة القانونية ) </div>
                             </div>
 
                             <i class="fa-solid fa-circle-user"></i>
@@ -214,10 +211,11 @@
                 </div>
             </div>
         </header>
+        @* Navbar *@
         <div class="navbar-expand-md">
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <div class="navbar navbar-light">
-                    <div class="container-fluid">
+                    <div class="container-fluid"style=" justify-content: space-around;">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
                                 <a class="nav-link" href="./">
@@ -261,10 +259,13 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
                                    data-bs-auto-close="outside" role="button" aria-expanded="false">
-                                    <i class="fa-solid fa-mailbox-flag-up"></i>
-                                    <span class="nav-link-title">
-                                        الاستدعاءات
-                                    </span>
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+
+                                        <i class="fa-solid fa-scale-balanced"></i>
+                                        </span>
+                                        <span class="nav-link-title">
+                                            الاستدعاءات
+                                        </span>
                                 </a>
                                 <div class="dropdown-menu">
                                     <div class="dropdown-menu-columns">
@@ -395,7 +396,7 @@
             </div>
             <!-- Page body -->
             <div class="page-body">
-                <div class="container">
+                <div class="container-fluid">
                     @RenderBody()
                 </div>
             </div>

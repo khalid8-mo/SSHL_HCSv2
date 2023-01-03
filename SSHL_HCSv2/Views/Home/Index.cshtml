@@ -1,1 +1,392 @@
-﻿ 
+﻿ @{
+    ViewBag.Title = "التعماميم الداخلية";
+}
+<style>
+    input[type=radio] {
+        box-sizing: border-box;
+        padding: 0;
+        margin-left: 5px !important;
+        width: 20px;
+    }
+
+    .form-check-input {
+        margin-right: 100px !important;
+    }
+
+    .form-check-inline {
+        font-weight: 600;
+    }
+</style>
+
+@using (Html.BeginForm("Create", "GENERALIZATIONINTERNALs", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="card">
+            <div class="card-header ">
+                <h4 class="title">  التعاميم الداخلية </h4>
+            </div>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="container mt-3">
+                <h4 class="SubTitle">البيانات المستخدم  </h4>
+                <br />
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <label for="timesheetinput1">متسلسل</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="position-relative has-icon-left">
+                                        @{
+                                            var recordid = ViewBag.UserID;
+                                        }
+                                        <input id="UserID" name="UserID" type="text" class="form-control" readonly value="@recordid" />
+                                        <div class="form-control-position">
+                                            <i class="icon-pen"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <label for="timesheetinput1">التاريخ</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="position-relative has-icon-left">
+                                        @{
+                                            var date = DateTime.Now.ToShortDateString();
+                                        }
+                                        <input id="OrderDate" name="OrderDate" type="text" class="form-control" readonly value="@date" />
+                                        <div class="form-control-position">
+                                            <i class="icon-android-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @*<div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-md-4">
+                                        <label for="timesheetinput1">البلدية</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="position-relative has-icon-left">
+                                            @{
+                                                var facility = ViewBag.Municiplty;
+                                            }
+                                            <input id="Facility" name="Facility" type="text" class="form-control" readonly value="@facility" />
+                                            <div class="form-control-position">
+                                                <i class="icon-house"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <label for="timesheetinput1">الإدارة العامة</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="position-relative has-icon-left">
+                                        <input id="Department" name="Department" type="text" class="form-control" readonly value="@ViewBag.Department" />
+                                        <div class="form-control-position">
+                                            <i class="icon-house"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <label for="timesheetinput1">المستخدم</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="position-relative has-icon-left">
+                                        @{
+                                            var user = ViewBag.UserName;
+                                        }
+                                        <input id="User" name="User" type="text" class="form-control" readonly value="@user" />
+                                        <div class="form-control-position">
+                                            <i class="icon-head"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <label for="timesheetinput1">الإسم</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="position-relative has-icon-left">
+                                        @{
+                                            var name = ViewBag.UserFullName;
+                                        }
+                                        <input id="Name" name="Name" type="text" class="form-control" readonly value="@name" />
+                                        <div class="form-control-position">
+                                            <i class="icon-head"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="form-section"><i class="icon-file2"></i>بيانات التعميم</h4>
+                <hr />
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <label for="timesheetinput1">تاريخ التسجيل</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="position-relative has-icon-left">
+                                        @{
+                                            var REGDATE = DateTime.Now.ToShortDateString();
+                                        }
+                                        <input id="REGDATE" name="REGDATE" type="text" class="form-control" readonly value="@REGDATE" />
+                                        <div class="form-control-position">
+                                            <i class="icon-android-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <label for="timesheetinput1">وقت التسجيل<span style="color:red">*</span></label>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="position-relative has-icon-left">
+                                        @{
+                                            var REGTIME = DateTime.Now.ToShortTimeString();
+                                        }
+                                        <input id="REGTIME" name="REGTIME" class="form-control" readonly value="@REGTIME" />
+                                        <div class="form-control-position">
+                                            <i class="icon-android-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--////////////////////////// ONE ROW END /////////////////////////////////////-->
+                <!--////////////////////////// ONE ROW START /////////////////////////////////////-->
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <label for="timesheetinput1">رقم التعميم<span style="color:red">*</span></label>
+                                </div>
+                                @{
+                                    var NewID = ViewBag.NewID;
+                                }
+                                <div class="col-md-8">
+                                    <div class="position-relative has-icon-left">
+                                        <input type="text" id="CALLNUMBER" name="CALLNUMBER" class="form-control form-validation" readonly value="@NewID" />
+                                        <div class="form-control-position">
+                                            <i class="icon-pen"></i>
+                                        </div>
+                                    </div>
+                                    <div id="CALLNUMBERError"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <label for="timesheetinput1">عنوان التعميم<span style="color:red">*</span></label>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="position-relative">
+                                        <input type="text" id="GENERALIZATIONADDRESS" name="GENERALIZATIONADDRESS" class="form-control" required />
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--////////////////////////// ONE ROW END /////////////////////////////////////-->
+                <!--////////////////////////// ONE ROW START /////////////////////////////////////-->
+                <!--////////////////////////// ONE ROW END /////////////////////////////////////-->
+                <!--////////////////////////// ONE ROW START /////////////////////////////////////-->
+                <!--////////////////////////// ONE ROW END /////////////////////////////////////-->
+                <!--////////////////////////// ONE ROW START /////////////////////////////////////-->
+
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="timesheetinput1">الشروحات<span style="color:red"></span></label>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="position-relative">
+                                        <input type="text" id="NOTES" name="NOTES" class="form-control" />
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="timesheetinput1">المرفقات<span style="color:red"></span></label>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="position-relative has-icon-left">
+                                        <input type="file" id="ATTACHMENTS" name="ATTACHMENTS" class="form-control" />
+                                        <div class="form-control-position">
+                                            <i class="icon-attachment"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group text-md-center">
+                    <div class="col-md-12" @*style=" margin-top:4px;"*@>
+                        <input type="submit" value="تسجيل" class="btn-hover btn btn-primary" id="btnSubmit" />
+                    </div>
+                </div>
+
+                <!--////////////////////////// ONE ROW END /////////////////////////////////////-->
+            </div>
+        </div>
+    </div>
+}
+
+ 
+    <script>
+        debugger
+        var ClassName = $(".form-control"), // Get Class Name Input
+            ButtonID = $("#btnSubmit"),
+            optional = [0,1,2,3,4,5,6,19,21,11,12,10];// Get Button ID
+        validationscript(ClassName, ClassName.length, ButtonID, optional);
+        //Attachment
+        var Attachment2 = $("#Attachment2"),
+            Attachment1 = $("#Attachment1");
+        AttachmentsValidation(Attachment2);
+        AttachmentsValidation(Attachment1);
+        CCPValdation(ClassName);
+
+        // Number
+        @*var InboxNumber = $("#InboxNumber"),
+            DocumentNumber = $("#DocumentNumber"),
+            DocumentNumberError = $("#DocumentNumberError"),
+            CaseNumber = $("#CaseNumber"),
+            CaseNumberError = $("#CaseNumberError"),
+            IdentityNumber = $("#IdentityNumber"),
+            IdentityNumberError = $("#IdentityNumberError"),
+            InboxNumberError = $("#InboxNumberError");
+        PhoneValidation(InboxNumber, InboxNumberError);
+        PhoneValidation(DocumentNumber, DocumentNumberError);
+        PhoneValidation(CaseNumber, DocumentNumberError);
+        PhoneValidation(IdentityNumber, IdentityNumberError);
+        FeadBackMassege(@ViewBag.Status);
+        $(IdentityNumber).focusout(function (e) {
+            if (IdentityNumber.val().length ==  10) {
+                $(IdentityNumberError).html("");
+
+            }
+        });*@
+            $(IdentityNumber).keyup(function (e) {
+                if (IdentityNumber.val().length < 10) {
+                    $(IdentityNumberError).html("رقم الهوية لا يقل عن 10 خانات").addClass("red");
+                    $(IdentityNumber).addClass("is-invalid")
+                    return false;
+                } else {
+                    $(IdentityNumber).removeClass("is-invalid");
+                    return true;
+                }
+            });
+        // Only English & Arapic
+         var OnlyEnglish_ArapicId = $("#Sender"),
+            OnlyEnglish_ArapicError = $("#SenderError"),
+            CitizenName = $("#CitizenName"),
+            CitizenNameError = $("#CitizenNameError");
+        OnlyEnglish_Arapic(OnlyEnglish_ArapicId, OnlyEnglish_ArapicError);
+        OnlyEnglish_Arapic(CitizenName, CitizenNameError);
+    </script>
+    <script>
+        $("#DEPARTMENTID").on("change", function () {
+            debugger
+
+            var opj = {};
+            opj.DEPARMENTID = $("#DEPARTMENTID").val();
+            $.ajax({
+                type: "Post",
+                url: "/LEMS/RECALLFORMs/GetEmplloyee",
+                data: JSON.stringify(opj),
+                contentType: "application/json",
+                dataType: "json",
+                success: function (response) {
+                    DDl(response, "#EMPLOYEEID");
+                }
+            });
+        }
+        );
+
+
+        var DDl = function (response, target) {
+            $(target).find('option').remove().end().append('<option value=""> اختر من القائمة</option>');
+            for (var i = 0; i < response.length; i++) {
+                $(target).append(`<option value="${response[i].ID}">${response[i].Name}</option>`);
+            }
+        }
+
+
+    </script>
+
+ 
