@@ -1,0 +1,415 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> شركة إلتزام للمحاماة والإستشارات القانونية</title>
+    <link rel="icon" href="~/assets/img/logo/eltezam_logo-transparent.png" type="image/x-icon">
+    <!-- CSS files -->
+    <link href="~/assets/css/tabler.rtl.min.css" rel="stylesheet" />
+    <link href="~/assets/css/tabler.rtl.css" rel="stylesheet" />
+    <link href="~/assets/css/tabler-flags.rtl.min.css" rel="stylesheet" />
+    <link href="~/assets/css/tabler-payments.rtl.min.css" rel="stylesheet" />
+    <link href="~/assets/css/tabler-vendors.rtl.min.css" rel="stylesheet" />
+    <link href="~/assets/css/demo.rtl.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/0616c6a2ed.js" crossorigin="anonymous"></script>
+    <style>
+        /*   @@import url('https://rsms.me/inter/inter.css');
+
+        :root {
+            --tblr-font-sans-serif: Inter, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue,Cairo, sans-serif;
+        }*/
+        .fa-solid, .fas {
+            color: #d1a338;
+            line-height: 1.3;
+        }
+        body {
+            font-family: 'Cairo' !important;
+            font-size:16px
+        }
+        .fa-circle-user, .fa-right-to-bracket, fa-person-walking-dashed-line-arrow-right {
+            font-size: 22px;
+            margin-right: 16px;
+        }
+        .fa-right-to-bracket {
+            cursor: pointer
+        }
+        .number-of-notifacation {
+            font-size: 11px;
+            margin-right: 7px;
+        }
+        .trigger {
+            list-style: none;
+            text-decoration: none;
+            color: #d1a338
+        }
+            .trigger:hover {
+                list-style: none;
+                text-decoration: none;
+                color: #e7b43e
+            }
+         
+    </style>
+</head>
+
+<body>
+    <script src="~/assets/js/demo-theme.min.js"></script>
+    <div class="page">
+        <!-- Navbar -->
+        <header class="navbar navbar-expand-md navbar-light d-print-none"style="background: #fdf6f1">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu"
+                        aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href=".">
+                        <img src="~/assets/img/logo/eltezam_logo-transparent.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+                    </a>
+                </h1>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item d-none d-md-flex me-3">
+
+                    </div>
+                    <div class="d-none d-md-flex">
+                        <!-- Dark Theme -->
+                        <!--<a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode"
+                           data-bs-toggle="tooltip" data-bs-placement="bottom">-->
+                            <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
+                            <!--<svg xmlns="~/assets/img/logo/eltezam_logo-transparent.png" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                                 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                            </svg>
+                        </a>-->
+                        <a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode"
+                           data-bs-toggle="tooltip" data-bs-placement="bottom">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/sun -->
+                            <i class="fa-solid fa-bell fa-shake"> </i>
+                        </a>
+                        <div class="nav-item dropdown d-none d-md-flex me-3">
+                            <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
+                                <!-- Download SVG icon from http://tabler-icons.io/i/bell -->
+                                <i class="fa-solid fa-bell fa-shake"> </i>
+                                <span class="badge bg-red"></span>
+                                <span class="number-of-notifacation">50</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-end dropdown-menu-card">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Last updates</h3>
+                                    </div>
+                                    <div class="list-group list-group-flush list-group-hoverable">
+                                        <div class="list-group-item">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto"><span class="status-dot status-dot-animated bg-red d-block"></span></div>
+                                                <div class="col text-truncate">
+                                                    <a href="#" class="text-body d-block">Example 1</a>
+                                                    <div class="d-block text-muted text-truncate mt-n1">
+                                                        Change deprecated html tags to text decoration classes (#29604)
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="#" class="list-group-item-actions">
+                                                        <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24"
+                                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                             stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto"><span class="status-dot d-block"></span></div>
+                                                <div class="col text-truncate">
+                                                    <a href="#" class="text-body d-block">Example 2</a>
+                                                    <div class="d-block text-muted text-truncate mt-n1">
+                                                        justify-content:between ⇒ justify-content:space-between (#29734)
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="#" class="list-group-item-actions show">
+                                                        <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-yellow" width="24" height="24"
+                                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                             stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto"><span class="status-dot d-block"></span></div>
+                                                <div class="col text-truncate">
+                                                    <a href="#" class="text-body d-block">Example 3</a>
+                                                    <div class="d-block text-muted text-truncate mt-n1">
+                                                        Update change-version.js (#29736)
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="#" class="list-group-item-actions">
+                                                        <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24"
+                                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                             stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <span class="status-dot status-dot-animated bg-green d-block"></span>
+                                                </div>
+                                                <div class="col text-truncate">
+                                                    <a href="#" class="text-body d-block">Example 4</a>
+                                                    <div class="d-block text-muted text-truncate mt-n1">
+                                                        Regenerate package-lock.json (#29730)
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="#" class="list-group-item-actions">
+                                                        <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-muted" width="24" height="24"
+                                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                             stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <span href="Javascript:void" class="nav-link d-flex lh-1 text-reset p-0" style="cursor:context-menu">
+                            <div class="d-none d-xl-block ps-2">
+                                <div>صالح بن علي بن سعدي الشمراني </div>
+                                <div class="mt-1 small text-muted">( إدارة الحسابات ) </div>
+                            </div>
+
+                            <i class="fa-solid fa-circle-user"></i>
+                            <a href="#" title="تسجيل خروج" class="fa-solid fa-right-to-bracket trigger"></a>
+ 
+                        </span>
+                  
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="navbar-expand-md">
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <div class="navbar navbar-light">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                        <i class="fa-solid fa-house-user"></i>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        لوحة المعلومات
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
+                                   data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/package -->
+                                        <i class="fa-solid fa-gavel"></i>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        القضايا
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-menu-columns">
+                                        <div class="dropdown-menu-column">
+                                            <a class="dropdown-item" href="./empty.html">
+                                                تسجيل بيانات قضية
+                                            </a>
+                                            <a class="dropdown-item" href="./accordion.html">
+                                                قائمة القضايا
+                                            </a>
+                                            <a class="dropdown-item" href="./accordion.html">
+                                                القضايا المحالة للموظف
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
+                                   data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                    <i class="fa-solid fa-mailbox-flag-up"></i>
+                                    <span class="nav-link-title">
+                                        الاستدعاءات
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-menu-columns">
+                                        <div class="dropdown-menu-column">
+                                            <a class="dropdown-item" href="./empty.html">
+                                                إستدعاء موظف
+                                            </a>
+                                            <a class="dropdown-item" href="./accordion.html">
+                                                قائمة الإستدعاءات
+                                            </a>
+                                            <a class="dropdown-item" href="./accordion.html">
+                                                قائمة الإستدعاءات _ موظف
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
+                                   data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/package -->
+                                        <i class="fa-solid fa-person-circle-exclamation"></i>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        الاستشارة
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-menu-columns">
+                                        <div class="dropdown-menu-column">
+                                            <a class="dropdown-item" href="./empty.html">
+                                                تسجيل  استشاره
+                                            </a>
+                                            <a class="dropdown-item" href="./accordion.html">
+                                                قائمة الاستشارات
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
+                                   data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/package -->
+                                        <i class="fa-solid fa-bars-progress"></i>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        التعاميم
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-menu-columns">
+                                        <div class="dropdown-menu-column">
+                                            <a class="dropdown-item" href="./empty.html">
+                                                التعاميم الداخلية
+                                            </a>
+                                            <a class="dropdown-item" href="./accordion.html">
+                                                تسجيل البيانات المالية
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                  
+                                        <i class="fa-sharp fa-solid fa-money-check-dollar"></i>
+                                    </span>
+
+                                        <span class="nav-link-title">
+                                            قائمة الدفعات المالية
+                                        </span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                        <i class="fa-sharp fa-solid fa-clipboard"></i>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        ارشفة القضايا
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="./">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                        <i class="fa-sharp fa-solid fa-clipboard"></i>
+
+
+                                    </span>
+                                    <span class="nav-link-title">
+                                       تقارير الادارة القانونية
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <!-- Page header -->
+            <div class="page-header d-print-none">
+                <div class="container-fluid">
+                    <div class="row g-2 align-items-center">
+                        <div class="col">
+                            <!-- Page pre-title -->
+                            <span class="page-title">
+                                الصفحة الرئسية
+                            </span>
+                            <span class="page-pretitle">
+                               القضاء
+                            </span>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Page body -->
+            <div class="page-body">
+                <div class="container">
+                    @RenderBody()
+                </div>
+            </div>
+
+        </div>
+    </div>
+     <!-- Libs JS -->
+    <script src="~/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="~/assets/libs/jsvectormap/dist/js/jsvectormap.min.js"></script>
+    <script src="~/assets/libs/jsvectormap/dist/maps/world-merc.js" defer></script>
+    <script src="~/assets/libs/jsvectormap/dist/maps/world.js" defer></script>
+    <!-- Tabler Core -->
+    <script src="~/assets/js/tabler.min.js" defer></script>
+    <script src="~/assets/js/demo.min.js" defer></script>
+</body>
+
+</html>
